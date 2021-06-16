@@ -6,10 +6,10 @@ suppressPackageStartupMessages(c(
     library(markdown),
     library(stylo)))
 
-source("C:/Users/kavis/Documents/Kavi files/Git-R Files/datasciencecoursera/FinalProject_SwiftKey/Try/inputCleaner.R")
-final4Data <- readRDS(file="C:/Users/kavis/Documents/Kavi files/Git-R Files/datasciencecoursera/FinalProject_SwiftKey/Try/quadgram.RData")
-final3Data <- readRDS(file="C:/Users/kavis/Documents/Kavi files/Git-R Files/datasciencecoursera/FinalProject_SwiftKey/Try/trigram.RData")
-final2Data <- readRDS(file="C:/Users/kavis/Documents/Kavi files/Git-R Files/datasciencecoursera/FinalProject_SwiftKey/Try/bigram.RData")
+source("./inputCleaner.R")
+final4Data <- readRDS(file="./data/quadgram.RData")
+final3Data <- readRDS(file="./data/trigram.RData")
+final2Data <- readRDS(file="./data/bigram.RData")
 
 
 shinyServer(function(input, output) {
