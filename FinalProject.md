@@ -16,17 +16,12 @@ INTRODUCTION
 
 Prediction Algorithm
 ========================================================
-
 - A large corpus of blog, news and twitter data was loaded and analyzed
 - N-grams were extracted from the corpus and then used for building the predictive model 
 - Dataset was cleaned, lower-cased, removing links, twitter handles, punctuations, numbers and extra whitespaces, etc
 - Those aggregated bi,tri and quadgram term frequency matrices have been transferred into frequency dictionaries.
-- The resulting data.frames are used to predict the next word in connection with the text input by a user of the described application and the frequencies of underlying n-grams table.
-
-
 
 ```r
-## Building the tokenization function for the n-grams
 ngramTokenizer <- function(theCorpus, ngramCount) {
   ngramFunction <- NGramTokenizer(theCorpus, 
                                   Weka_control(min = ngramCount, max = ngramCount, 
@@ -38,6 +33,7 @@ ngramTokenizer <- function(theCorpus, ngramCount) {
   ngramFunction
 }
 ```
+
 
 Shiny Application Works
 ========================================================
@@ -51,6 +47,8 @@ Shiny Application Works
 Links to RPubs,Shiny App, Github Repository
 ========================================================
  * The next word prediction app is hosted on shinyapps.io:[https://ks21.shinyapps.io/NextWordApp/]
- * Github link for various code files is here:     https://github.com/kavishant87/Final--capstone
+ * Github link for various code files is here:  
+ * Open Link in new tab
+  https://github.com/kavishant87/FinalCapstone
  * The R Presentation is published on RPubs :  
- https://rpubs.com/KaviS/NextWordApp
+ https://rpubs.com/KaviS/NextWordPredFinalApp
